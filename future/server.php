@@ -76,28 +76,6 @@ if (isset($_POST['login_user'])) {
 
     if (count($errors) == 0) {
         $password = md5($password);
-        // play from here 
-        if ($_POST['username'] == '@adminAR') {
-            header('location: enrollAR.php');
-        }
-
-        if ($_POST['username'] == '@adminBASA') {
-            header('location: paymentsBASA.php');
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = mysqli_query($db, $sql);
@@ -105,7 +83,7 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($result) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
-            header('Location: payments.php');
+            header('Location: ./student/results.php');
         } else {
             array_push($errors, "username and password dont match");
         }

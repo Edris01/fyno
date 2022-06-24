@@ -78,11 +78,11 @@ if (isset($_POST['login_user'])) {
         $password = md5($password);
         // play from here 
         if ($_POST['username'] == '@adminAR') {
-            header('location: enrollAR.php');
+            header('location: fixedEnrollAR.php');
         }
 
         if ($_POST['username'] == '@adminBASA') {
-            header('location: paymentsBASA.php');
+            header('location: fixedPaymentsBASA.php');
         }
 
 
@@ -105,9 +105,21 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($result) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
-            header('Location: payments.php');
+            header('Location: fixedPayments.php');
         } else {
             array_push($errors, "username and password dont match");
         }
+    }
+}
+
+
+// searching button 
+if(isset($_POST['search_student_AR'])) {
+    $searchedName = mysqli_real_escape_string($db, $_POST['search_student_name']);
+    $sql = "SELECT * FROM users WHERE username = '$searchedName'";
+    $result = mysqli_query($db, $sql);
+
+    if (mysqli_num_rows($result) >= 1) {
+        header('location: view.php');
     }
 }

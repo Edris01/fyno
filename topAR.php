@@ -4,6 +4,6 @@
     </div>
 
     <div class="header-right px-3">
-        <a href="./login.php?logout=1" name="logout" class="btn btn-danger mx-2">Log Out</a>
+        <a href="login.php?logout=1" name="logout" class="btn btn-danger mx-2">Log Out</a>
     </div>
 </nav>

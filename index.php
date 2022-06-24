@@ -18,21 +18,21 @@ if (isset($_GET['logout'])) {
     include "head.php";
 ?>
 <body class="container-fluid m-0 p-0">
-    <div class="bg-success">
+    <div class="bg-success fixedtop">
         <?php
         include "top.php";
         ?>
     </div>
 
-    <div class="dashboard">
-        <div class="bg-light">
+    <div class="dashboard0">
+        <div class="bg-light fixedDashboard">
             <?php
             require "dashboard.php";
             ?>
         </div>
 
-        <div class="m-2">
-            <div class="containers">
+        <div class="fixedDisplay">
+            <div class="containers mx-2">
                 <h3 class="text-success">Payments</h3>
                 <nav class="navbar">
                     <div class="container">
@@ -42,8 +42,9 @@ if (isset($_GET['logout'])) {
                         </form>
                     </div>
                 </nav>
+                <hr class="text-dark">
             </div>
-            <table class="table table-striped table-hover mt-2">
+            <table class="table table-striped table-hover m-2">
                 <tr class="bg-warning">
                     <th>Date</th>
                     <th>Bank Name</th>

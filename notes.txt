@@ -2,3 +2,9 @@ i want to make a we chat on the system where admins can communicate as if they a
 
 i want to change login credentials for students to be Reg no.
 
+i have to make the top.phps fixed ne dashboard testing with fixed.phps
+
+i want to create print and download bottons to print and download the slips
+
+i want to complete the forget password page (reset.php)
+

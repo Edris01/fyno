@@ -1,11 +1,13 @@
+
 <nav class="navbar-default navbar-side" role="navigation">
     <div class="sidebar-collapse h-100">
         <div>
+            <br>
             <div class="text-center mt-3">
                 <h2 class="int text-danger ">Dashboard</h2>
-                <div class="mx-2">
+                <div class="text-center text-success int">
                     <?php
-                    echo date("D d-M-Y H:i");
+                    echo date("D d-M-Y");
                     ?>
                 </div>
             </div>
@@ -24,9 +26,14 @@
             <li>
                 <a class="fs-4 text-datk btn" href="fixedBalancesBASA.php">Balances</a>
             </li>
-            <br>
+            <!-- i had created this botton to help the bausar to calculate and make more finanical calculate like the cashflow e.g cash in ne cas out  -->
+            <!-- <br>
             <li>
                 <a class="fs-4 text-dark btn" href="fixedChecksBASA.php">Checks</a>
+            </li> -->
+            <br>
+            <li>
+                <a class="fs-4 text-datk btn btn-warning" href="#">We Chat</a>
             </li>
         </ul>
     </div>

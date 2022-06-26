@@ -22,7 +22,7 @@ include "head.php";
         </div>
         <div class="fixedDisplay">
             <h3 class="text-success text-center mx-2">Messages</h3>
-            <hr class="text-dark">
+            <hr class="text-dark m-2">
 
         </div>
     </div>

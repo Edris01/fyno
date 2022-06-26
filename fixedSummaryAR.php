@@ -24,6 +24,7 @@ include "head.php";
             <!-- displaying number of students per facutly  -->
         </div>
     </div>
+    <br>
 </body>
 
 </html>

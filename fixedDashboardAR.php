@@ -1,11 +1,12 @@
 <nav class="navbar-default navbar-side" role="navigation">
     <div class="sidebar-collapse">
         <div>
+            <br>
             <div class="text-center mt-3">
                 <h2 class="int text-danger ">Dashboard</h2>
-                <div class="mx-2">
+                <div class="int text-center text-success">
                     <?php
-                    echo date("D d-M-Y H:i");
+                    echo date("D d-M-Y");
                     ?>
                 </div>
             </div>
@@ -22,12 +23,13 @@
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn" href="fixedCommunicateAR.php">We Chat</a>
+                <a class="fs-4 text-dark btn btn-warning" href="fixedCommunicateAR.php">We Chat</a>
             </li>
-            <br>
+            <!-- i had put this botton to help the AR know the name of students in each Faculty and ne ku campus  -->
+            <!-- <br>
             <li>
                 <a class="fs-4 text-dark btn" href="fixedSummaryAR.php">Summary</a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>

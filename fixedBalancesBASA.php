@@ -20,10 +20,10 @@ include "head.php";
         </div>
 
         <div class="fixedDisplay">
-            <h3 class="text-success text-center m-2">Balances</h3>
-            <hr class="text-dark mx-2">
+            <h3 class="text-success text-center mx-2">Balances</h3>
+            <hr class="text-dark m-2">
             <div class="mx-2">
-
+                
             </div>
         </div>
     </div>

@@ -1,0 +1,109 @@
+<?php
+
+
+// searching button 
+if(isset($_POST['search_student_AR'])) {
+    $searchedName = mysqli_real_escape_string($db, $_POST['search_student_name']);
+    $sql = "SELECT * FROM users WHERE username = '$searchedName'";
+    $result = mysqli_query($db, $sql);
+
+    if (mysqli_num_rows($result) >= 1) {
+        header('location: view.php');
+    }
+
+            $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+        $result = mysqli_query($db, $sql);
+
+        if (mysqli_num_rows($result) == 1) {
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = "";
+            header('Location: fixedPayments.php');
+        } else {
+            array_push($errors, "username and password dont match");
+        }
+}
+
+
+        // play from here 
+        if ($_POST['username'] == '@adminAR') {
+            if($_POST['password'] == "admin0") {
+                header('location: fixedEnrollAR.php');
+                exit();
+            }else {
+                array_push($errors, "Wrong Password"); 
+            }
+        }
+
+        if ($_POST['username'] == '@adminBASA') {
+            if($_POST['password'] == "admin00") {
+                header('location: fixedPaymentBASA.php');
+
+            } else{
+                array_push($errors, "Wrong Password");
+                exit();
+            }
+        }
+
+
+
+           // search botton
+           $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+           $result = mysqli_query($db, $sql);
+   
+           if (mysqli_num_rows($result) == 1) {
+               $_SESSION['username'] = $username;
+               $_SESSION['success'] = "";
+               header('Location: fixedPayments.php');
+           } else {
+               array_push($errors, "username and password dont match");
+           }
+
+
+
+
+
+
+
+
+// login action for admins
+// if (isset($_POST['login_user'])) {
+//     $username = mysqli_real_escape_string($db, $_POST['username']);
+//     $password = mysqli_real_escape_string($db, $_POST['password']);
+
+
+//     if (empty($username)) {
+//         array_push($errors, 'username is required');
+//     }
+//     if (empty($password)) {
+//         array_push($errors, 'password is required');
+//     }
+
+//     if (count($errors) == 0) {
+//         // $password = md5($password);
+
+
+//         // play from here 
+//         if ($_POST['username'] == '@adminAR') {
+//             if($_POST['password'] == "admin0") {
+//                 header('location: fixedEnrollAR.php');
+//                 exit();
+//             }else {
+//                 array_push($errors, "Wrong Password"); 
+//             }
+//         }  
+//         // }else {
+//         //     array_push($errors, "");
+//         // } 
+
+
+//         if ($_POST['username'] == '@adminBASA') {
+//             if($_POST['password'] == "admin00") {
+//                 header('location: fixedPaymentBASA.php');
+
+//             } else{
+//                 array_push($errors, "Wrong Password");
+//                 exit();
+//             }  
+//         }
+// }
+?>

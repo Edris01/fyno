@@ -19,8 +19,8 @@ include "head.php";
             ?>
         </div>
         <div class="fixedDisplay">
-            <h3 class="text-success text-center mt-3 fs-4">Update Student`s Info</h3>
-            <hr class="text-success mx-2">
+            <h3 class="text-success text-center mt-4 fs-4">Update Student`s Info</h3>
+            <hr class="text-success m-2">
 
             <form class="row g-3 mx-2">
 
@@ -115,8 +115,9 @@ include "head.php";
                 </div>
                 <!-- i will add fields for filling in requests for o`level ne a`level  -->
                 <div class="col-12">
-                    <button class="btn btn-primary" name="create_student" type="submit">Submit</button>
+                    <button class="btn btn-primary" name="create_student" type="submit">Update</button>
                 </div>
+                
             </form>
         </div>
 

@@ -2,7 +2,6 @@
 session_start(); 
 
 if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
 }
 if (isset($_GET['logout'])) {
@@ -10,13 +9,17 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['username']);
     header("location: login.php");
 }
-?>
 
+?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    include "head.php";
+include "head.php";
 ?>
+
 <body class="container-fluid m-0 p-0">
     <div class="bg-success fixedtop">
         <?php
@@ -27,24 +30,13 @@ if (isset($_GET['logout'])) {
     <div class="dashboard0">
         <div class="bg-light fixedDashboard">
             <?php
-            require "dashboard.php";
+            require_once "fixedDashboard.php";
             ?>
         </div>
-
         <div class="fixedDisplay">
-            <div class="containers mx-2">
-                <h3 class="text-success">Payments</h3>
-                <nav class="navbar">
-                    <div class="container">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Student" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-                <hr class="text-dark">
-            </div>
-            <table class="table table-striped table-hover m-2">
+            <h3 class="text-success text-center mx-2">Payments</h3>
+            <hr class="text-dark m-2">
+            <table class="table table-striped table-hover m-4 text-center w-75 fixedWidth2">
                 <tr class="bg-warning">
                     <th>Date</th>
                     <th>Bank Name</th>

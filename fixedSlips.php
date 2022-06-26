@@ -22,8 +22,8 @@ include "head.php";
         </div>
         <div class="fixedDisplay">
             <h3 class="text-success text-center mx-2">Slips</h3>
-            <hr class="text-dark mx-2">
-            <table class="table table-striped table-hover m-2">
+            <hr class="text-dark m-2">
+            <table class="table table-striped table-hover m-4 text-center w-75">
                 <tr class="bg-warning">
                     <th>Date</th>
                     <th>Bank Name</th>

@@ -12,6 +12,7 @@ if (!$db) {
     die("database connection failed!");
 }
 
+// i have to add in more fleids since it registeration for a student and it required many question to be filled by the bausar 
 //registration action
 if (isset($_POST['register_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -61,43 +62,30 @@ if (isset($_POST['register_user'])) {
     }
 }
 
-// login action
+
+
+
+// login action for students
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
 
     if (empty($username)) {
-        array_push($errors, 'username is required');
+        // array_push($errors, 'username is required');
+        echo "<script language='javascript'>";
+        echo "alert('Username is required')";
+        echo "</script>";
     }
     if (empty($password)) {
-        array_push($errors, 'password is required');
+        // array_push($errors, 'password is required');
+        echo "<script language='javascript'>";
+        echo "alert('Password is Required')";
+        echo "</script>";
     }
 
     if (count($errors) == 0) {
         $password = md5($password);
-        // play from here 
-        if ($_POST['username'] == '@adminAR') {
-            header('location: fixedEnrollAR.php');
-        }
-
-        if ($_POST['username'] == '@adminBASA') {
-            header('location: fixedPaymentsBASA.php');
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = mysqli_query($db, $sql);
@@ -106,20 +94,23 @@ if (isset($_POST['login_user'])) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
             header('Location: fixedPayments.php');
+
+            
+            // i was trying to make identite 
+            // switch($username) {
+            //     case '@adminBASA':
+            //         header('location: fixedPaymentBASA.php');
+            //         break;
+            //     case '@adminAR':
+            //         header('location: fixedEnrollAR.php');
+            //         break;
+            //     default:
+            //         header('location: fixedPayments.php');
+            //         break;
+            // }
+            
         } else {
             array_push($errors, "username and password dont match");
         }
-    }
-}
-
-
-// searching button 
-if(isset($_POST['search_student_AR'])) {
-    $searchedName = mysqli_real_escape_string($db, $_POST['search_student_name']);
-    $sql = "SELECT * FROM users WHERE username = '$searchedName'";
-    $result = mysqli_query($db, $sql);
-
-    if (mysqli_num_rows($result) >= 1) {
-        header('location: view.php');
-    }
+    }  
 }

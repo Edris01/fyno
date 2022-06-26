@@ -34,7 +34,7 @@ include "head.php";
                         </div>
                     </nav>
                 </div>
-                <hr class="text-dark">
+                <hr class="text-dark m-2">
 
                 <table class="table table-striped table-hover ">
                     <tr class="bg-warning">

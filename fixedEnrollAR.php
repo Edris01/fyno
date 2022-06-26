@@ -17,8 +17,8 @@
             ?>
         </div>
         <div class="fixedDisplay">
-            <h3 class="text-success text-center mt-3 fixedWidth">Enroll Student</h3>
-            <hr class="text-dark mx-2">
+            <h3 class="text-success text-center mt-4 fixedWidth">Enroll Student</h3>
+            <hr class="text-dark m-2">
 
             <form class="row g-3 m-3 fixedWidth2">
                 

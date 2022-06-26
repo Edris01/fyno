@@ -8,3 +8,8 @@ i want to create print and download bottons to print and download the slips
 
 i want to complete the forget password page (reset.php)
 
+for the forget password botton immediately if pressed it will automaticaly send a message on the client is email so to confirm that he is the right person he will have to enter  the emaill and the passcode sent to his email then after he can reset a new password
+
+pernow am removing the results pages but the client wants a fees management system where somebody can pay from and access his payment records any time and this also should help out the bausar in knowing how has paid when and how 
+
+soon making the title bar contant like fixed nga it has not make

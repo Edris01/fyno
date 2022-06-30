@@ -19,14 +19,14 @@ include "head.php";
 <body class="container-fluid m-0 p-0">
     <div class="bg-success fixedtop">
         <?php
-        include "topAR.php";
+        include "ARtop.php";
         ?>
     </div>
 
     <div class="dashboard0">
         <div class="bg-light fixedDashboard ">
             <?php
-            require_once "fixedDashboardAR.php";
+            require_once "ARDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">
@@ -67,27 +67,6 @@ include "head.php";
                     </tr>
                 </tbody>
             </table>
-            <!-- <table class="table table-striped table-hover mx-1">
-                <tr class="bg-warning">
-                    <th>Reg No.</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Faculty </th>
-                    <th>Course</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>19/BIT/031/UMC</td>
-                    <td><?php echo $username; ?></td>
-                    <td>lubowaedris</td>
-                    <td>Technology</td>
-                    <td>BIT</td>
-                    <td>
-                        <a href="updateAR.php"><button class="btn btn-info">Edit</button></a>
-                        <button class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
-            </table> -->
         </div>
 
     </div>

@@ -1,6 +1,6 @@
 # Student`s Portal 
 
-This is a web based system used by institutes to make work easy in a way that students can acces their results from the portal and even pay tuition with the system and then it reflects in the system and stored for future use 
+This is a web based system used by institutes to make work easy in a way that students can pay tuition with the system and then it reflects in the system and stored for future use by either my the student or the bausar which also easies the registration process incase a student whats to process the examination permit
 
 ## functions for the system
 
@@ -11,5 +11,3 @@ This is a web based system used by institutes to make work easy in a way that st
 3. students can access their results from the system 
 
 4. stores slips for future use for both the student and bausar
-
-5. 

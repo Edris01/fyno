@@ -93,7 +93,7 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($result) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
-            header('Location: fixedPayments.php');
+            header('Location: StudentPayments.php');
 
             
             // i was trying to make identite 

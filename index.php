@@ -2,6 +2,7 @@
 session_start(); 
 
 if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
 }
 if (isset($_GET['logout'])) {
@@ -9,11 +10,8 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['username']);
     header("location: login.php");
 }
+?>
 
-?>
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -23,14 +21,14 @@ include "head.php";
 <body class="container-fluid m-0 p-0">
     <div class="bg-success fixedtop">
         <?php
-        include "top.php";
+        include "StudentTop.php";
         ?>
     </div>
 
     <div class="dashboard0">
         <div class="bg-light fixedDashboard">
             <?php
-            require_once "fixedDashboard.php";
+            require_once "StudentDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">

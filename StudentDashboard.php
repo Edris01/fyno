@@ -20,7 +20,7 @@
 
         <ul class="nav-bar" id="main-menu">
             <li>
-                <a class="active-menu fs-4 text-dark btn" href="fixedPayments.php">Payments</a>
+                <a class="active-menu fs-4 text-dark btn" href="StudentPayments.php">Payments</a>
             </li>
             <br>
             <!-- <li>
@@ -28,11 +28,11 @@
             </li>
             <br> -->
             <li>
-                <a class="fs-4 text-dark btn" href="fixedSlips.php">Bank Slips</a>
+                <a class="fs-4 text-dark btn" href="StudentSlips.php">Bank Slips</a>
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn btn-warning" href="fixedPaynow.php ">Pay Now</a>
+                <a class="fs-4 text-dark btn btn-warning" href="StudentPaynow.php ">Pay Now</a>
             </li>
             <br>
         </ul>

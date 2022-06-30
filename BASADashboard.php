@@ -16,15 +16,15 @@
 
         <ul class="nav-bar" id="main-menu">
             <li>
-                <a class="active-menu fs-4 text-dark btn" href="fixedPaymentsBASA.php">Payments</a>
+                <a class="active-menu fs-4 text-dark btn" href="BASAPayments.php">Payments</a>
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn" href="fixedClearedBASA.php">Cleared</a>
+                <a class="fs-4 text-dark btn" href="BASACleared.php">Cleared</a>
             </li>
             <br>
             <li>
-                <a class="fs-4 text-datk btn" href="fixedBalancesBASA.php">Balances</a>
+                <a class="fs-4 text-datk btn" href="BASABalances.php">Balances</a>
             </li>
             <!-- i had created this botton to help the bausar to calculate and make more finanical calculate like the cashflow e.g cash in ne cas out  -->
             <!-- <br>
@@ -33,7 +33,7 @@
             </li> -->
             <br>
             <li>
-                <a class="fs-4 text-datk btn btn-warning" href="#">We Chat</a>
+                <a class="fs-4 text-datk btn btn-warning" href="BASACommunicate.php">We Chat</a>
             </li>
         </ul>
     </div>

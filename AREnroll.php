@@ -6,14 +6,14 @@
 <body class="container-fluid m-0 p-0">
     <div class="bg-success fixedtop">
         <?php
-        include "topAR.php";
+        include "ARtop.php";
         ?>
     </div>
 
     <div class="dashboard0">
         <div class="bg-light fixedDashboard">
             <?php
-            require_once "fixedDashboardAR.php";
+            require_once "ARDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">

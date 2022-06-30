@@ -15,21 +15,20 @@
 
         <ul class="nav-bar" id="main-menu">
             <li>
-                <a class="active-menu fs-4 text-dark btn" href="fixedEnrollAR.php">Enroll</a>
+                <a class="active-menu fs-4 text-dark btn" href="AREnroll.php">Enroll</a>
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn" href="fixedStudentAR.php">Students</a>
+                <a class="fs-4 text-dark btn" href="ARStudent.php">Students</a>
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn btn-warning" href="fixedCommunicateAR.php">We Chat</a>
+                <a class="fs-4 text-dark btn" href="ARSummary.php">Summary</a>
             </li>
-            <!-- i had put this botton to help the AR know the name of students in each Faculty and ne ku campus  -->
-            <!-- <br>
+            <br>
             <li>
-                <a class="fs-4 text-dark btn" href="fixedSummaryAR.php">Summary</a>
-            </li> -->
+                <a class="fs-4 text-dark btn btn-warning" href="ARCommunicate.php">We Chat</a>
+            </li>
         </ul>
     </div>
 </nav>

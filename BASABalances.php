@@ -8,14 +8,14 @@ include "head.php";
 <body class="container-fluid m-0 p-0">
     <div class="bg-success fixedtop">
         <?php
-        include "topAR.php";
+        include "ARtop.php";
         ?>
     </div>
 
     <div class="dashboard0">
         <div class="bg-light fixedDashboard">
             <?php
-            require_once "fixedDashboardBASA.php";
+            require_once "BASADashboard.php";
             ?>
         </div>
 

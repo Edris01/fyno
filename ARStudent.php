@@ -1,10 +1,4 @@
 <?php
-    include "server.php";
-    session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-<?php
 include "head.php";
 ?>
 
@@ -56,8 +50,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -69,8 +65,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button name="delete" class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -82,8 +80,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -95,8 +95,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -108,8 +110,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -121,8 +125,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -134,8 +140,10 @@ include "head.php";
                         <td>Technology</td>
                         <td>BIT</td>
                         <td>
-                            <a href="fixedUpdateAR.php"><button class="btn btn-info">Edit</button></a>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="ARStudent.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>
+                                <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 </table>

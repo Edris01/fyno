@@ -94,23 +94,64 @@ if (isset($_POST['login_user'])) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
             header('Location: StudentPayments.php');
-
-            
-            // i was trying to make identite 
-            // switch($username) {
-            //     case '@adminBASA':
-            //         header('location: fixedPaymentBASA.php');
-            //         break;
-            //     case '@adminAR':
-            //         header('location: fixedEnrollAR.php');
-            //         break;
-            //     default:
-            //         header('location: fixedPayments.php');
-            //         break;
-            // }
             
         } else {
             array_push($errors, "username and password dont match");
         }
     }  
+}
+
+// code for updating the code thru editing
+    if(isset($_GET['edit'])) {
+
+        header("location: ARUpdate.php");
+
+        $sql = "UPDATE users SET username = '$username' password = '$password' WHERE username = '$username'";
+
+        $result = mysqli_query($db, $sql);
+
+    }
+
+//code for delecting the user thru pressing the delete botton 
+if(isset($_GET['delete'])) {
+
+    header("location: ARStudent.php?deletedsuccessfull");
+
+    $sql = "DELETE FROM users WHERE username = '$username'";
+
+    $result = mysqli_query($db, $sql);
+
+}
+
+//send message by the admin
+if(isset($_POST['send_message'])) {
+
+    // sending a message to the students
+    header("location: ARStudent.php?sent");
+}
+
+// code for veiwing data from the database
+        // $sql = "SELECT * FROM users";
+        // $result = mysqli_query($db, $sql);
+        // $rowCount = mysqli_num_rows($result);
+
+        // if($rowCount > 0) {
+        //     while ($row = mysqli_fetch_assoc($result)) {
+        //         echo $row['username'] . "<br>";
+        //     }
+        // } else {
+        //     echo 'No result found.';
+        // }
+
+// botton for printing the slip 
+    if(isset($_GET['print'])) {
+        header("location: StudentSlips.php?printedsuccessfull");
+    }
+
+//logout botton
+
+if(isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php?loggedout");
 }

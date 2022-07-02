@@ -4,7 +4,9 @@
     </div>
 
     <div class="header-right px-3">
-        <a href="StudentMessages.php" class="btn btn-primary">Messages</a></a>
-        <a href="login.php" name="logout" class="btn btn-danger mx-2">Log Out</a>
+        <form action="server.php" method="get">
+            <a href="StudentMessages.php" class="btn btn-primary">Messages</a></a>
+            <button type="submit" name="logout" class="btn btn-danger mx-2">Log Out <i class="bi bi-box-arrow-right"></i></button>
+        </form>
     </div>
 </nav>

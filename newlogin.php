@@ -1,15 +1,6 @@
 <?php
-include "server.php";
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <?php
     include "head.php";
-    ?>
-</head>
+?>
 
 <body class="d-flex h-100 bg-success">
     <div class="h">

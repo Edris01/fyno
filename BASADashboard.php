@@ -33,7 +33,7 @@
             </li> -->
             <br>
             <li>
-                <a class="fs-4 text-datk btn btn-warning" href="BASACommunicate.php">We Chat</a>
+                <a class="fs-4 text-datk btn btn-warning" href="BASACommunicate.php">We Chat <i class="bi bi-chat-right-quote-fill"></i></a>
             </li>
         </ul>
     </div>

@@ -1,18 +1,4 @@
 <?php
-session_start();
-include "server.php";
-
-$sql = "SELECT * FROM 'users'";
-
-$result = mysqli_query($db, $sql);
-
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<?php
 include "head.php";
 ?>
 
@@ -34,7 +20,7 @@ include "head.php";
                 <h3 class="text-success">Students</h3>
                 <nav class="navbar">
                     <div class="container">
-                        <form action="studentAR.php" method="POST" class="d-flex" role="search">
+                        <form action="view.php" method="POST" class="d-flex" role="search">
                             <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
                             <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
                         </form>
@@ -48,22 +34,32 @@ include "head.php";
                     <tr>
                         <th>ID</th>
                         <th>USERNAME</th>
-                        <th>ACTION</th>
+                        <!-- <th>ACTION</th> -->
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc());
-                    }
-                    ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['username']; ?></td>
-                        <td>
-                            <a class="btn btn-info" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>&nbsp;
-                            <a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Update</a>
-                        </td>
+                        <?php
+                        $sql = "SELECT * FROM users";
+                        $result = mysqli_query($db, $sql);
+                        $rowCount = mysqli_num_rows($result);
+
+                        if ($rowCount > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                // echo $row['username'] . "<br>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['username'] . "</td>";
+                            }
+                        } else {
+                            echo 'No result found.';
+                        }
+                        ?>
+                        <!-- <td>
+                            <form action="view.php" method="get">
+                                <a class="btn btn-info" name="edit" href="update.php?edited">Edit</a>&nbsp;
+                                <a class="btn btn-danger" name="delete" href="delete.php?">Delete</a>
+                            </form>
+                        </td> -->
                     </tr>
                 </tbody>
             </table>

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 include "head.php";
 ?>
@@ -22,7 +20,7 @@ include "head.php";
             <h3 class="text-success text-center">Communication</h3>
             <hr class="text-dark m-2">
             <!-- i wanted to make this option where the admins can communicate direct like a messaging app  -->
-            <form action="communicate.php" class="form m-4">
+            <form action="communicate.php" class="form m-4" method="post">
                 <div class="row">
                     <div class="col-md-6">
                         <input type="text" placeholder="To:" class="form-control mb-2">
@@ -34,7 +32,7 @@ include "head.php";
                 <br>
                 <textarea name="message" id="" cols="30" rows="9" class="form-control" placeholder="Message"></textarea>
                 <br>
-                <button class="btn btn-primary">Send</button>
+                <button class="btn btn-primary" type="submit" name="send_message">Send</button>
             </form>
         </div>
     </div>

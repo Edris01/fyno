@@ -1,9 +1,4 @@
 <?php
-session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-<?php
 include "head.php";
 ?>
 
@@ -34,7 +29,12 @@ include "head.php";
                     <td>1/01/2001</td>
                     <td>Equity</td>
                     <td>000</td>
-                    <td> <button class="btn btn-info">Print</button></td>
+                    <td> 
+                        <form action="StudentSlips.php" method="get">
+                            <button class="btn btn-dark" name="view">view</button>
+                            <button class="btn btn-info" name="print">Print</button>
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>

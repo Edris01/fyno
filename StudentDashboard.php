@@ -32,7 +32,7 @@
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn btn-warning" href="StudentPaynow.php ">Pay Now</a>
+                <a class="fs-4 text-dark btn btn-warning" href="StudentPaynow.php "><i class="bi bi-paypal"></i> Pay Now</a>
             </li>
             <br>
         </ul>

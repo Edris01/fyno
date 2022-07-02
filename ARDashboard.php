@@ -27,7 +27,7 @@
             </li>
             <br>
             <li>
-                <a class="fs-4 text-dark btn btn-warning" href="ARCommunicate.php">We Chat</a>
+                <a class="fs-4 text-dark btn btn-warning" href="ARCommunicate.php">We Chat <i class="bi bi-chat-right-quote-fill"></i></a>
             </li>
         </ul>
     </div>

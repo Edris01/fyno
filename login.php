@@ -19,15 +19,16 @@ include "head.php";
                 <?php include 'errors.php'; ?>
             </div>
             <div class="d-grid g-1 align-center">
-                <input class="form-control w-25 mt-6 login text-center" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
-                <input class="form-control w-25 mt-4 login text-center" type="password" name='password' placeholder='Password'>
+                <input class="form-control w-25 mt-6 login text-center" id="username" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+                <input class="form-control w-25 mt-4 login text-center" id="password" type="password" name='password' placeholder='Password'>
             </div>
             <br>
-            <a href="reset.php">Forgot password?</a>
+            <a href="reset.php" class="text-info ">Forgot password?</a>
             <br>
-            <button class="btn btn-success mt-4 mb-3" type="submit" name="login_user">LOGIN</button>
+            <button class="btn btn-success mt-4 mb-3" type="submit" name="login_user"><i class="bi bi-box-arrow-in-right"></i> LOGIN</button>
         </form>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

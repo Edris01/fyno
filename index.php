@@ -5,17 +5,10 @@ if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
 }
-if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['username']);
-    header("location: login.php");
-}
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<?php
-include "head.php";
+<!-- <?php
+    include "head.php";
 ?>
 
 <body class="container-fluid m-0 p-0">
@@ -50,4 +43,4 @@ include "head.php";
     </div>
 </body>
 
-</html>
+</html> -->

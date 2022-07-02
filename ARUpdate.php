@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 include "head.php";
 ?>
@@ -8,14 +5,14 @@ include "head.php";
 <body class="container-fluid m-0 p-0">
     <div class="bg-success fixedtop">
         <?php
-        include "topAR.php";
+        include "ARtop.php";
         ?>
     </div>
 
     <div class="dashboard0">
         <div class="bg-light fixedDashboard">
             <?php
-            require_once "fixedDashboardAR.php";
+            require_once "ARDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">
@@ -114,7 +111,7 @@ include "head.php";
                     <input type="text" placeholder="Reg No." class="form-control">
                 </div>
                 <!-- i will add fields for filling in requests for o`level ne a`level  -->
-                <div class="col-12">
+                <div class="col-12 mb-4">
                     <button class="btn btn-primary" name="create_student" type="submit">Update</button>
                 </div>
                 

@@ -8,14 +8,14 @@
         ?>
     </div>
 
-    <div class="dashboard0">
+    <div class="dashboard">
         <div class="bg-light fixedDashboard">
             <?php
             require_once "ARDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">
-            <h3 class="text-success text-center mt-4 fixedWidth">Enroll Student</h3>
+            <h3 class="text-success text-center fixedWidth">Enroll Student</h3>
             <hr class="text-dark m-2">
 
             <form class="row g-3 m-3 fixedWidth2">

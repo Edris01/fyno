@@ -12,14 +12,15 @@ include "head.php";
     <div class="container">
         <h2 class="text-center text-success mt-5">Student`s Portal</h2>
         <hr class="text-dark">
-        <p class="text-center text-danger mt-3 fs-6 int">'Please enter your details'</p>
+        <p class="text-center text-dark mt-3 fs-5 int">'Please enter your details'</p>
 
         <form action="login.php" method="post" class="w-100 text-center">
             <div class="text-center">
                 <?php include 'errors.php'; ?>
             </div>
             <div class="d-grid g-1 align-center">
-                <input class="form-control w-25 mt-6 login text-center" id="username" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+                <!-- i will use reg no. for logging in by the students -->
+                <input class="form-control w-25 mt-6 login text-center" id="username" type="text" name="username" placeholder="Registration Number" value="<?php echo $username; ?>">
                 <input class="form-control w-25 mt-4 login text-center" id="password" type="password" name='password' placeholder='Password'>
             </div>
             <br>

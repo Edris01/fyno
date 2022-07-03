@@ -17,20 +17,18 @@ include "head.php";
         </div>
 
         <div class="fixedDisplay">
-            <div class="containers mx-2">
-                <h3 class="text-success">Payments</h3>
-                <nav class="navbar">
-                    <div class="container">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Student" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
+            <div class="d-flex w-100">
+                <h3 class="text-success col-md-8">Payments</h3>
+                <nav class="navbar col-md-4">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Student" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </nav>
             </div>
             <hr class="text-dark m-2">
             <div class="">
-                <table class="table table-striped table-hover mx-4 text-center w-75">
+                <table class="table table-striped table-hover mx-2 text-center">
                     <tr class="bg-warning">
                         <th>Student</th>
                         <th>Transaction Id</th>

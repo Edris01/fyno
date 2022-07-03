@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "head.php";
 ?>
 
@@ -9,24 +10,14 @@ include "head.php";
         ?>
     </div>
 
-    <div class="dashboard0">
+    <div class="dashboard">
         <div class="bg-light fixedDashboard ">
             <?php
             require_once "ARDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">
-            <div class="containers mx-2">
-                <h3 class="text-success">Students</h3>
-                <nav class="navbar">
-                    <div class="container">
-                        <form action="studentAR.php" method="POST" class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                            <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-            </div>
+            <h3 class="text-success text-center">Searched Students</h3>
             <hr class="text-dark mx-2">
 
             <table class="table mx-2">
@@ -38,45 +29,42 @@ include "head.php";
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc());
-                    }
-                    ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['username']; ?></td>
+                        <?php
+                            if (isset($_GET['search_student_AR'])) {
+                                header("location: searched.php");
+                                $sql = "SELECT * FROM users WHERE username = $username";
+                                $result = mysqli_query($db, $sql);
+                                $rowCount = mysqli_num_rows($result);
+                            
+                                if ($rowCount > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $user_Id = $row['id'];
+                                        $uName = $row['username'];
+                                    };
+                                } else {
+                                    echo 'No Results Found!';
+                                }
+                            }
+                        ?>
                         <td>
-                            <a class="btn btn-info" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>&nbsp;
-                            <a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Update</a>
+                            <?php echo $user_Id; ?>
+                        </td>
+                        <td>
+                            <?php echo $uName; ?>
+                        </td>
+                        <td>
+                           <form action="searched.php" method="get">
+                                <button class="btn btn-info" type="submit" name="edit">Edit</button>&nbsp;
+                                <button class="btn btn-danger" type="submit" name="update">Update</button>
+                           </form>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <!-- <table class="table table-striped table-hover mx-1">
-                <tr class="bg-warning">
-                    <th>Reg No.</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Faculty </th>
-                    <th>Course</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>19/BIT/031/UMC</td>
-                    <td><?php echo $username; ?></td>
-                    <td>lubowaedris</td>
-                    <td>Technology</td>
-                    <td>BIT</td>
-                    <td>
-                        <a href="updateAR.php"><button class="btn btn-info">Edit</button></a>
-                        <button class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
-            </table> -->
         </div>
 
     </div>
-</body>
-
-</html>
+<?php
+    include_once "footer.php";
+?>

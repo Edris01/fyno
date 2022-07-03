@@ -9,7 +9,7 @@ include "head.php";
         ?>
     </div>
 
-    <div class="dashboard0">
+    <div class="dashboard">
         <div class="bg-light fixedDashboard">
             <?php
             require_once "BASADashboard.php";

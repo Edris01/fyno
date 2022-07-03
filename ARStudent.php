@@ -9,28 +9,26 @@ include "head.php";
         ?>
     </div>
 
-    <div class="dashboard0">
+    <div class="dashboard">
         <div class="bg-light fixedDashboard">
             <?php
             require_once "ARDashboard.php";
             ?>
         </div>
         <div class="fixedDisplay">
-            <div class="m-2">
-                <div class="containers">
-                    <h3 class="text-success">Students</h3>
-                    <nav class="navbar">
-                        <div class="container">
-                            <form action="fixedStudentAR.php" method="POST" class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-                            </form>
-                        </div>
+            <div class="pt-2">
+                <div class="d-flex w-100">
+                    <h3 class="text-success col-md-8">Students</h3>
+                    <nav class="navbar col-md-4">
+                        <form action="ARStudent.php" method="get" class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
+                            <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
+                        </form>
                     </nav>
                 </div>
-                <hr class="text-dark m-2">
+                <hr class="text-dark mx-2">
 
-                <table class="table table-striped table-hover ">
+                <table class="table table-striped table-hover">
                     <tr class="bg-warning">
                         <th>No.</th>
                         <th>Reg No.</th>

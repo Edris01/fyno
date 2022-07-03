@@ -1,17 +1,47 @@
-'use strict'
+const form = document.querySelector('form');
+usernameFeild = form.querySelector('.username');
+usernameInput = usernameFeild.querySelector('input');
+passwordFeild = form.querySelector('.password');
+passwordInput = passwordFeild.querySelector('input');
 
-function login() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+form.onsubmit = (e) => {
+    e.preventDefault();
+    (usernameInput.value == "") ? usernameFeild.classList.add("shake", "error") : checkUsername();
+    (passwordInput.value == "") ? passwordFeild.classList.add("shake", "error") : checkPass();
 
-    if(username == "") {
-        alert('username is required');
-    }else if(password == "") {
-        alert('password is required');
-    }else if(password.length < 6) {
-        alert('password is less than 6 charaters');
-    } else{
-        alert('thanks for logging our website');
-        window.location = "edris01.github.com";
+    setTimeout(() => {
+        usernameFeild.classList.remove("shake");
+        passwordFeild.classList.remove("shake");
+    }, 500)
+}
+
+usernameInput.onkeyup = () => { checkUsername(); }
+passwordInput.onkeyup = () => { checkPass(); }
+
+function checkUsername() {
+    let pattern = /^["a-zA-Z0-9"]*/;
+    if (!usernameInput.value.match(pattern)) {
+        usernameFeild.classList.add("error");
+        usernameFeild.classList.remove("valid");
+        let errorTxt = usernameFeild.querySelector(".error-txt");
+        (usernameInput.value != "") ? errorTxt.innerText = "Enter a valid username" : errorText.innerText = "username can`t be blank";
+    } else {
+        usernameFeild.classList.remove("error");
+        usernameFeild.classList.add("valid");
+    }
+
+    if (!usernameFeild.classList.contains("error") && !passwordFeild.classList.contains("error")) {
+        window.location.href = form.getAttribute("action");
+    }
+}
+
+function checkPass() {
+    if(passwordInput.value !== "") {
+        passwordFeild.classList.remove("error");
+        passwordFeild.classList.add("valid");
+    }
+
+    if(!passwordFeild.classList.contains("error")) {
+        window.location.href = form.getAttribute("action");
     }
 }

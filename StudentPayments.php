@@ -9,7 +9,7 @@ include "head.php";
         ?>
     </div>
 
-    <div class="dashboard0">
+    <div class="dashboard">
         <div class="bg-light fixedDashboard">
             <?php
             require_once "StudentDashboard.php";
@@ -18,7 +18,7 @@ include "head.php";
         <div class="fixedDisplay">
             <h3 class="text-success text-center mx-2">Payments</h3>
             <hr class="text-dark m-2">
-            <table class="table table-striped table-hover m-4 text-center w-75 fixedWidth2">
+            <table class="table table-striped table-hover m-2 text-center">
                 <tr class="bg-warning">
                     <th>Date</th>
                     <th>Bank Name</th>

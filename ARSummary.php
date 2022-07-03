@@ -9,7 +9,7 @@ include "head.php";
         ?>
     </div>
 
-    <div class="dashboard0">
+    <div class="dashboard">
         <div class="bg-light fixedDashboard">
             <?php
             require "ARDashboard.php";
@@ -18,11 +18,11 @@ include "head.php";
 
         <div class="fixedDisplay">
             <h3 class="text-success text-center">Number of Students</h3>
-            <hr class="text-dark">
+            <hr class="text-dark m-2">
             <!-- displaying number of students per facutly  -->
         </div>
     </div>
     <br>
-</body>
-
-</html>
+<?php
+    include_once "footer.php";
+?>

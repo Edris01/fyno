@@ -12,6 +12,9 @@ if (!$db) {
     die("database connection failed!");
 }
 
+
+
+
 // i have to add in more fleids since it registeration for a student and it required many question to be filled by the bausar 
 //registration action
 if (isset($_POST['register_user'])) {
@@ -72,16 +75,13 @@ if (isset($_POST['login_user'])) {
 
 
     if (empty($username)) {
-        // array_push($errors, 'username is required');
-        echo "<script language='javascript'>";
-        echo "alert('Username is required')";
-        echo "</script>";
+        array_push($errors, 'username is required');
+    }
+    if (!preg_match("/^[a-zA-z-Z0-9]*/", $username)) {
+        array_push($error, 'username must not contain symbols');
     }
     if (empty($password)) {
-        // array_push($errors, 'password is required');
-        echo "<script language='javascript'>";
-        echo "alert('Password is Required')";
-        echo "</script>";
+        array_push($errors, 'password is required');
     }
 
     if (count($errors) == 0) {
@@ -94,64 +94,107 @@ if (isset($_POST['login_user'])) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "";
             header('Location: StudentPayments.php');
-            
         } else {
             array_push($errors, "username and password dont match");
         }
-    }  
+    }
 }
+
+
+
 
 // code for updating the code thru editing
-    if(isset($_GET['edit'])) {
+if (isset($_GET['edit'])) {
 
-        header("location: ARUpdate.php");
+    header("location: ARUpdate.php");
 
-        $sql = "UPDATE users SET username = '$username' password = '$password' WHERE username = '$username'";
-
-        $result = mysqli_query($db, $sql);
-
-    }
-
-//code for delecting the user thru pressing the delete botton 
-if(isset($_GET['delete'])) {
-
-    header("location: ARStudent.php?deletedsuccessfull");
-
-    $sql = "DELETE FROM users WHERE username = '$username'";
+    $sql = "UPDATE users SET username = '$username' password = '$password' WHERE username = '$username'";
 
     $result = mysqli_query($db, $sql);
-
 }
 
+
+
+
+//code for delecting the user thru pressing the delete botton 
+
+if (isset($_GET['Delete'])) {
+    $UserID = $_GET['Delete'];
+    $sql = "DELETE FROM users WHERE username = '$username'";
+    $result = mysqli_query($db, $sql);
+
+    if ($result) {
+        header("location:view.php?deletedsuccessfully");
+    } else {
+        echo ' Please Check Your Query ';
+    }
+}
+
+
+
+
 //send message by the admin
-if(isset($_POST['send_message'])) {
+if (isset($_POST['send_message'])) {
 
     // sending a message to the students
     header("location: ARStudent.php?sent");
 }
 
-// code for veiwing data from the database
-        // $sql = "SELECT * FROM users";
-        // $result = mysqli_query($db, $sql);
-        // $rowCount = mysqli_num_rows($result);
 
-        // if($rowCount > 0) {
-        //     while ($row = mysqli_fetch_assoc($result)) {
-        //         echo $row['username'] . "<br>";
-        //     }
-        // } else {
-        //     echo 'No result found.';
-        // }
+
+
+// code for veiwing data from the database
+
+if (isset($_GET['view'])) {
+    // this is code for viewing data from the database
+    $sql = "SELECT * FROM users";
+    $result = mysqli_query($db, $sql);
+    $rowCount = mysqli_num_rows($result);
+
+    if ($rowCount > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $idRow = $row['id'];
+            $idUsername = $row['username'];
+        }
+    } else {
+        echo 'No result found.';
+    }
+}
+
+
+
 
 // botton for printing the slip 
-    if(isset($_GET['print'])) {
-        header("location: StudentSlips.php?printedsuccessfull");
-    }
+if (isset($_GET['print'])) {
+    header("location: StudentSlips.php?printedsuccessfull");
+}
+
+
+
 
 //logout botton
 
-if(isset($_GET['logout'])) {
+if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
     header("location: login.php?loggedout");
+}
+
+
+
+
+//search botton
+if (isset($_GET['search_student_AR'])) {
+    header("location: searched.php");
+    $sql = "SELECT * FROM users WHERE username = $username";
+    $result = mysqli_query($db, $sql);
+    $rowCount = mysqli_num_rows($result);
+
+    if ($rowCount > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $row['username'] = $username;
+        };
+    } else {
+        echo 'No Results Found!';
+    }
 }

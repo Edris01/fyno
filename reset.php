@@ -5,7 +5,7 @@
     <div class="container">
         <h2 class="text-center text-success mt-5">Student`s Portal</h2>
         <hr class="text-dark mx-2">
-        <p class="text-center text-danger mt-4 fs-6 int">'Please enter your account email to verify'</p>
+        <p class="text-center text-dark mt-4 fs-5 int">'Verify Your Email'</p>
 
         <form action="login.php" method="post" class="w-100 text-center">
             <?php include 'errors.php'; ?>

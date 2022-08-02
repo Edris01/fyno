@@ -1,16 +1,17 @@
-<?php 
+<?php
+
 if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
+    header('location: login-one.php');
 }
+
 ?>
 
 <?php
-    include "head.php";
+    include("./includes/layouts/head.php")
 ?>
 
-<body class="container-fluid m-0 p-0">
+<h1>Thanks for logging In!!</h1>
 
 <?php
-    include_once "footer.php"
+    include_once("./includes/layouts/footer.php")
 ?>

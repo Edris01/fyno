@@ -1,122 +1,72 @@
-<?php 
-    include "head.php";
+<?php
+include("../../includes/layouts/head.php");
 ?>
-<body class="container-fluid m-0 p-0">
-    <div class="bg-success fixedtop">
+
+<?php
+include('../../includes/layouts/admin-header.php')
+?>
+
+<main>
+    <!-- sidebar  -->
+    <div class="left-sidebar">
         <?php
-        include "ARtop.php";
+        include('../../includes/layouts/AR-dashboard.php')
         ?>
     </div>
 
-    <div class="dashboard">
-        <div class="bg-light fixedDashboard">
-            <?php
-            require_once "ARDashboard.php";
-            ?>
+    <!-- content  -->
+    <div class="content">
+        <div class="d-flex">
+            <h3 class="text-success col-md-8">Students</h3>
+            <div class="d-flex col-md-4">
+                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
+                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
+            </div>
         </div>
-        <div class="fixedDisplay">
-            <h3 class="text-success text-center fixedWidth">Enroll Student</h3>
-            <hr class="text-dark m-2">
+        <hr class="text-success">
 
-            <form class="row g-3 m-3 fixedWidth2">
-                
-                <div class="col-md-4">
-                    <label class="form-label">First name</label>
-                    <input type="text" class="form-control" placeholder="First name" required>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Last name</label>
-                    <input type="text" class="form-control" placeholder="Last name" required>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Given name</label>
-                    <input type="text" class="form-control" placeholder="Given name">
-                </div>
+        <table class="table table-striped table-hover w-100">
+            <thead class="bg-warning">
+                <th>No.</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Reg No.</th>
+                <th colspan="2">Action</th>
+            </thead>
+            <tbody>
+                <?php
+                include('../../includes/logic/config.php');
 
-                <div class="col-md-4">
-                    <label class="form-label">Gender</label>
-                    <input type="text" class="form-control" placeholder="M/F" required>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Age</label>
-                    <input type="number" class="form-control" placeholder="01" required>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Date Of Birth</label>
-                    <input type="date" class="form-control" placeholder="Given name">
-                </div>
-                
-                <div class="col-md-6">
-                    <label class="form-label">Username</label>
-                    <input type="text" class="form-control" placeholder="username" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="example@domain.com" aria-describedby="validationServer03Feedback" required>
-                </div>
-                
-                <div class="col-md-6">
-                    <label class="form-label">Educational Level</label>
-                    <select class="form-select" aria-describedby="validationServer04Feedback" required>
-                        <option>O`level</option>
-                        <option>A`level</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Instutite</label>
-                    <input type="text" class="form-control" aria-describedby="validationServer05Feedback" placeholder="Institute" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Index No.</label>
-                    <input type="text" class="form-control" aria-describedby="validationServer05Feedback" placeholder="Index number" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Aggs</label>
-                    <input type="number" class="form-control" aria-describedby="validationServer05Feedback" placeholder="00" required>
-                </div>
-                <br>
-                <div class="col-md-6">
-                    <label class="form-label">Educational Level</label>
-                    <select class="form-select" aria-describedby="validationServer04Feedback" required>
-                        <option>A`level</option>
-                        <option>0`level</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Instutite</label>
-                    <input type="text" class="form-control" aria-describedby="validationServer05Feedback" placeholder="Institute" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Index No.</label>
-                    <input type="text" class="form-control" aria-describedby="validationServer05Feedback" placeholder="Index number" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label">Aggs</label>
-                    <input type="number" class="form-control" aria-describedby="validationServer05Feedback" placeholder="00" required>
-                </div>
+                $sql = "SELECT * FROM users";
+                $result = mysqli_query($conn, $sql);
+                $rowCount = mysqli_num_rows($result);
 
-                <div class="col-md-12">
-                    <label class="form-label">Faculty</label>
-                    <select class="form-select" aria-describedby="validationServer04Feedback" required>
-                        <option value="Technology">Science and Technology</option>
-                        <option>Education</option>
-                        <option>Business</option>
-                        <option>Arts</option>
-                    </select>
-                </div>
-
-                <div class="col-md-12">
-                    <label class="form-label">Registration No.</label>
-                    <input type="text" placeholder="Reg No." class="form-control">
-                </div>
-                <!-- i will add fields for filling in requests for o`level ne a`level  -->
-                <div class="col-12">
-                    <button class="btn btn-primary" name="create_student" type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+                if ($rowCount > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo
+                        "
+                        <tr>
+                        <td>" . $row['id'] . "</td>
+                        <td>" . $row['username'] . "</td>
+                        <td>" . $row['email'] . "</td>
+                        <td>" . $row['regno'] . "</td>
+                        <td>
+                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> Edit</button>
+                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                        </td>
+                        </tr>
+                        ";
+                    }
+                } else {
+                    echo 'No result found.';
+                }
+                ?>
+            </tbody>
+        </table>
 
     </div>
-</body>
+</main>
 
-</html>
+<?php
+    include('../../includes/layouts/footer.php')
+?>

@@ -35,6 +35,14 @@ if (isset($_POST['login'])) {
     }
 }
 
+//logout botton
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php?loggedout");
+}
+
 
 
 

@@ -13,7 +13,7 @@
     <!-- awesome fonts  -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
     <!-- customized css  -->
-    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>

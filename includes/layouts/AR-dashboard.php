@@ -8,15 +8,12 @@
 </div>
 <ul>
     <li>
-        <a class="" href="AREnroll.php">Enroll</a>
+        <a class="" href="#">Enroll</a>
     </li>
     <li>
-        <a class="" href="ARStudent.php">Students</a>
+        <a class="" href="#">Students</a>
     </li>
     <li>
-        <a class="" href="ARSummary.php">Summary</a>
-    </li>
-    <li>
-        <a class="" href="ARCommunicate.php">We Chat <i class="bi bi-chat-right-quote-fill"></i></a>
+        <a class="" href="#">Summary</a>
     </li>
 </ul>

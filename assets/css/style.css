@@ -22,6 +22,11 @@ header .logo {
   padding-top: 12px;
 }
 
+header .logo span{
+    color: bisque;
+    font-style: italic;
+}
+
 header nav{
     float: right;
 }
@@ -73,3 +78,4 @@ a{
 ul, ol{
     list-style: none;
 }
+

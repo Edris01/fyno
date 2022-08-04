@@ -1,7 +1,7 @@
 <?php
-include_once('./includes/logic/config.php');
   include_once('./includes/logic/server.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,10 +41,13 @@ include_once('./includes/logic/config.php');
             <h2>Login</h2>
             <form method="post" action="login-one.php">
               <p>
-                <input type="text" placeholder="Email" name="email" required />
+                <span class="error"><?php echo $misMatchErr; ?></span>
+                <input type="text" placeholder="Email" name="email" value="<?php echo $email; ?>" />
+                <span class="error"><?php echo $emailErr; ?></span>
               </p>
               <p>
-                <input type="password" placeholder="Password" name="password" required />
+                <input type="password" placeholder="Password" name="password" />
+                <span class="error"><?php echo $passwordErr; ?></span>
               </p>
               <p>
                 <input class="btn" type="submit" name="login" value="Login" />

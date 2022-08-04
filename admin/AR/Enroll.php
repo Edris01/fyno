@@ -16,16 +16,13 @@ include('../../includes/layouts/admin-header.php')
 
     <!-- content  -->
     <div class="content">
-        <div class="d-flex">
-            <h3 class="text-success col-md-8">Students</h3>
-            <div class="d-flex col-md-4">
-                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-            </div>
+        <div class="">
+            <h3 class="text-success text-center">Enroll Student</h3>
         </div>
         <hr class="text-success">
+        <h2>form for inputting students in the database</h2>
 
-        <table class="table table-striped table-hover w-100">
+        <!-- <table class="table table-striped table-hover w-100">
             <thead class="bg-warning">
                 <th>No.</th>
                 <th>Username</th>
@@ -62,7 +59,7 @@ include('../../includes/layouts/admin-header.php')
                 }
                 ?>
             </tbody>
-        </table>
+        </table> -->
 
     </div>
 </main>

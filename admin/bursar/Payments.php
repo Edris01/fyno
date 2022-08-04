@@ -17,7 +17,7 @@ include('../../includes/layouts/admin-header.php')
     <!-- content  -->
     <div class="content">
         <div class="d-flex">
-            <h3 class="text-success col-md-8">Students</h3>
+            <h3 class="text-success col-md-8">Payments</h3>
             <div class="d-flex col-md-4">
                 <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
                 <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
@@ -51,8 +51,8 @@ include('../../includes/layouts/admin-header.php')
                         <td>" . $row['email'] . "</td>
                         <td>" . $row['regno'] . "</td>
                         <td>
-                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> Edit</button>
-                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> View</button>
+                            <button class='btn btn-primary' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
                         </td>
                         </tr>
                         ";

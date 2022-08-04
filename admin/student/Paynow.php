@@ -16,22 +16,23 @@ include('../../includes/layouts/Student-header.php')
 
     <!-- content  -->
     <div class="content">
-        <div class="d-flex">
-            <h3 class="text-success col-md-8">Students</h3>
-            <div class="d-flex col-md-4">
-                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-            </div>
+        <div class="">
+            <h3 class="text-success text-center">Pay Now</h3>
         </div>
         <hr>
+        <!-- on payment we want to do it as its with mtn nga
+         somebody just entering details and when he/she pressed
+          the pay button it he receiving a message on his phone then
+           he puts a password like its with mtn  -->
 
-        <table class="table table-striped table-hover">
+           <h2>input options that will be filled to make transactions</h2>
+        <!-- <table class="table table-striped table-hover">
             <thead class="bg-warning">
                 <th>No.</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Reg No.</th>
-                <th colspan="2">Action</th>
+                <th>Action</th>
             </thead>
             <tbody>
                 <?php
@@ -52,7 +53,6 @@ include('../../includes/layouts/Student-header.php')
                         <td>" . $row['regno'] . "</td>
                         <td>
                             <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> Edit</button>
-                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
                         </td>
                         </tr>
                         ";
@@ -62,7 +62,7 @@ include('../../includes/layouts/Student-header.php')
                 }
                 ?>
             </tbody>
-        </table>
+        </table> -->
 
     </div>
 </main>

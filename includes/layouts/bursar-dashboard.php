@@ -8,12 +8,9 @@
 </div>
 <ul>
     <li>
-        <a class="" href="#">Payments</a>
+        <a class="" href="../../admin/bursar/Payments.php"><i class="bi bi-cash-coin text-success"></i> &nbsp; Payments</a>
     </li>
     <li>
-        <a class="" href="#">Cleared</a>
-    </li>
-    <li>
-        <a class="" href="#">Balances</a>
+        <a class="" href="../../admin/bursar/statements.php"><i class="bi bi-credit-card"></i> &nbsp; Statements</a>
     </li>
 </ul>

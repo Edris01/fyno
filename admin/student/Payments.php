@@ -15,9 +15,12 @@ include('../../includes/layouts/Student-header.php')
     </div>
 
     <!-- content  -->
+
+    <!-- we need buttons here for easy checking oba the student is finally cleared or has a balance  -->
+    <!-- two buttons for cleared and defaulters and when clicked gives out a print for students under that category   -->
     <div class="content">
         <div class="d-flex">
-            <h3 class="text-success col-md-8">Students</h3>
+            <h3 class="text-success col-md-8">Payments</h3>
             <div class="d-flex col-md-4">
                 <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
                 <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
@@ -26,14 +29,15 @@ include('../../includes/layouts/Student-header.php')
         <hr>
 
         <table class="table table-striped table-hover">
-            <thead class="bg-warning">
+            <thead class="bg-warning text-center">
                 <th>No.</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Reg No.</th>
-                <th colspan="2">Action</th>
+                <th>Action</th>
+                <!-- we need a status bar here that verifies oba somebody is cleared or has some balances and if clicked shows payments slips and the balance   -->
             </thead>
-            <tbody>
+            <tbody class="text-center">
                 <?php
                 include('../../includes/logic/config.php');
 
@@ -52,7 +56,6 @@ include('../../includes/layouts/Student-header.php')
                         <td>" . $row['regno'] . "</td>
                         <td>
                             <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> Edit</button>
-                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
                         </td>
                         </tr>
                         ";

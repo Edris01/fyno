@@ -71,6 +71,10 @@ main .content {
     padding: 20px 30px;
 }
 
+main .content .content-button-space input{
+    float: right;
+}
+
 a{
     text-decoration: none;
 }

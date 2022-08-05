@@ -1,4 +1,5 @@
 <?php
+  include_once('./includes/logic/config.php');
   include_once('./includes/logic/server.php');
 ?>
 

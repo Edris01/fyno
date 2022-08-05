@@ -1,6 +1,5 @@
 <?php
 session_start();
-include('./config.php');
 
 // initialling variables 
 $emailErr = $passwordErr = $misMatchErr = "";
@@ -46,11 +45,4 @@ if (isset($_POST['login'])) {
             $misMatchErr = "Username & Password don`t match";
         }
     }
-}
-
-// logout button 
-if (isset($_GET['logout'])) {
-    session_unset();
-    session_destroy();
-    header("location: ./login.php?out");
 }

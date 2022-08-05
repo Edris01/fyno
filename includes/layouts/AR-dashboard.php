@@ -10,6 +10,6 @@
         <a class="" href="../../admin/AR/Payments.php"><i class="bi bi-credit-card text-success"></i> &nbsp; Payments</a>
     </li>
     <li>
-        <a class="" href="../../admin/AR/Chat.php"><i class="bi bi-chat-dots text-success"></i> &nbsp; Chat</a>
+        <a class="" data-bs-toggle="modal" data-bs-target="#chat"><i class="bi bi-chat-dots text-success"></i> &nbsp; Chat</a>
     </li>
 </ul>

@@ -16,7 +16,7 @@ include('../../includes/layouts/admin-header.php')
 
     <!-- content  -->
     <div class="content">
-        <div class="d-flex">
+        <div class="content-button-space">
             <button class='btn btn-primary' type='submit' name='print'><i class='bi bi-printer-fill'></i> &nbsp; Print</button>
             <input class="form-control w-25" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
         </div>
@@ -24,17 +24,18 @@ include('../../includes/layouts/admin-header.php')
         <table class="table table-striped table-bordered table-hover caption-top">
             <caption class="text-center fs-4">Payments</caption>
             <thead class="bg-info text-center">
-                <th>No.</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Reg No.</th>
+                <th>Transaction Id.</th>
+                <th>Name</th>
+                <th>Registration No.</th>
+                <th>Paid</th>
+                <th>Balance</th>
                 <th colspan="3">Action</th>
             </thead>
             <tbody class="text-center">
                 <?php
                 include('../../includes/logic/config.php');
 
-                $sql = "SELECT * FROM users";
+                $sql = "SELECT * FROM payments";
                 $result = mysqli_query($conn, $sql);
                 $rowCount = mysqli_num_rows($result);
 
@@ -43,10 +44,11 @@ include('../../includes/layouts/admin-header.php')
                         echo
                         "
                         <tr>
-                        <td>" . $row['id'] . "</td>
-                        <td>" . $row['username'] . "</td>
-                        <td>" . $row['email'] . "</td>
+                        <td>" . $row['transaction id'] . "</td>
+                        <td>" . $row['name'] . "</td>
                         <td>" . $row['regno'] . "</td>
+                        <td>" . $row['paid'] . "</td>
+                        <td>" . $row['balance'] . "</td>
                         <td>
                             <button class='btn btn-secondary' type='submit' name='view'><i class='bi bi-eye'></i> View</button>
                             <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-pencil-square'></i> Edit</button>
@@ -56,7 +58,12 @@ include('../../includes/layouts/admin-header.php')
                         ";
                     }
                 } else {
-                    echo 'No result found.';
+                    echo
+                        ("
+                        <tr>
+                        <td colspan='6'> No Results Found!!!</td>
+                        </tr>
+                        ");
                 }
                 ?>
             </tbody>
@@ -64,6 +71,11 @@ include('../../includes/layouts/admin-header.php')
 
     </div>
 </main>
+<?php include_once('../../includes/logic/add_modal.php'); ?>
+<?php include_once('../../includes/logic/edit_modal.php'); ?>
+<?php include_once('../../includes/logic/view_modal.php'); ?>
+<?php include_once('../../includes/logic/delete_modal.php'); ?>
+<?php include_once('../../includes/logic/chat_modal.php'); ?>
 
 <?php
     include('../../includes/layouts/footer.php')

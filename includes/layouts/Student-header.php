@@ -8,7 +8,7 @@
                 <button class="btn btn-primary"><i class="bi bi-envelope"></i> Messages</button>
             </li>
             <li>
-                <form action="" method="get">
+                <form action="../logic/logout.php" method="get">
                     <button type="submit" name="logout" class="btn btn-danger mx-2">Log Out <i class="bi bi-box-arrow-right"></i></button>
                 </form>
             </li>

@@ -1,10 +1,7 @@
 <?php
-//logout button
+// logout button 
 if (isset($_GET['logout'])) {
+    session_unset();
     session_destroy();
-    unset($_SESSION['email']);
-    header("location: login.php?out");
+    header("location: ../view.php");
 }
-
-
-?>

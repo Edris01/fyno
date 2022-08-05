@@ -6,7 +6,7 @@
 if (!isset($_SESSION['email'])) {
     header('location: login-one.php');
 }else{
-    header('location: Payments.php');
+    header('location: ./admin/Student/Payments.php');
 }
 
 ?>

@@ -13,20 +13,17 @@ include('../../includes/layouts/Student-header.php')
         include('../../includes/layouts/Student-dashboard.php')
         ?>
     </div>
-
+<!-- payments grouped per semester for easy issuing out a examination permit/card and financial statements  -->
     <!-- content  -->
     <div class="content">
         <div class="d-flex">
-            <h3 class="text-success col-md-8">Pay Slips</h3>
-            <div class="d-flex col-md-4">
-                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-            </div>
+            <button class='btn btn-primary' type='submit' name='print'><i class='bi bi-printer-fill'></i> &nbsp; Print</button>
+            <input class="form-control w-25" type="search" name="search_student_name" placeholder="Search Slips" aria-label="Search">
         </div>
-        <hr>
 
-        <table class="table table-striped table-hover">
-            <thead class="bg-warning text-center">
+        <table class="table table-striped table-bordered table-hover caption-top">
+            <caption class="text-center fs-4">Pay Slips</caption>
+            <thead class="bg-info text-center">
                 <th>No.</th>
                 <th>Username</th>
                 <th>Email</th>
@@ -51,7 +48,7 @@ include('../../includes/layouts/Student-header.php')
                         <td>" . $row['email'] . "</td>
                         <td>" . $row['regno'] . "</td>
                         <td>
-                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> Edit</button>
+                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> View</button>
                         </td>
                         </tr>
                         ";

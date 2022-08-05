@@ -16,26 +16,22 @@ include('../../includes/layouts/admin-header.php')
 
     <!-- content  -->
     <div class="content">
-        <div class="d-flex">
-            <h3 class="text-success col-md-8">Statements</h3>
-            <div class="d-flex col-md-4">
-                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-            </div>
+        <div class="">
+            <input class="form-control w-25" type="search" name="search_student_name" placeholder="Search Student" aria-label="Search">
         </div>
-        <hr>
-        <h2>
+        <h4>
         statements for payments which contain all transacts for all students and can be printed at once
-        </h2>
-        <!-- <table class="table table-striped table-hover">
-            <thead class="bg-warning">
+        </h4>
+        <table class="table table-striped table-bordered table-hover caption-top">
+            <caption class="text-center fs-4">Statements</caption>
+            <thead class="bg-info text-center">
                 <th>No.</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Reg No.</th>
                 <th colspan="2">Action</th>
             </thead>
-            <tbody>
+            <tbody class="text-center">
                 <?php
                 include('../../includes/logic/config.php');
 
@@ -64,7 +60,7 @@ include('../../includes/layouts/admin-header.php')
                 }
                 ?>
             </tbody>
-        </table> -->
+        </table>
 
     </div>
 </main>

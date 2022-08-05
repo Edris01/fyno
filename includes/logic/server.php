@@ -1,10 +1,6 @@
 <?php
-// database connection 
-$conn = mysqli_connect('localhost', 'root', '', 'final-project');
-// checking database connection 
-if(!$conn) {
-    die("Database connection failed");
-}
+session_start();
+include('./config.php');
 
 // initialling variables 
 $emailErr = $passwordErr = $misMatchErr = "";
@@ -54,7 +50,7 @@ if (isset($_POST['login'])) {
 
 // logout button 
 if (isset($_GET['logout'])) {
+    session_unset();
     session_destroy();
-    unset($_SESSION['email']);
     header("location: ./login.php?out");
 }

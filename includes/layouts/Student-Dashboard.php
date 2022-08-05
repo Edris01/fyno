@@ -17,10 +17,11 @@
     <li>
         <a class="" href="../../admin/student/Payments.php"><i class="bi bi-cash-coin text-success"></i> &nbsp; Payments</a>
     </li>
+    <!-- this option helps to group slip per semester to ease examination permit/card issuance  -->
     <li>
         <a class="" href="../../admin/student/Slips.php"><i class="bi bi-wallet text-success"></i> &nbsp;  Pay Slips</a>
     </li>
-    <li>
+    <!-- <li>
         <a class="" href="../../admin/student/Paynow.php"><i class="bi bi-paypal text-success"></i> &nbsp; Pay Now</a>
-    </li>
+    </li> -->
 </ul>

@@ -5,10 +5,10 @@
     <nav>
         <ul class="d-flex">
             <li>
-                <button class="btn btn-primary"><i class="bi bi-envelope"></i> Messages</button>
+                <a href="../../admin/student/message.php" class="btn btn-primary"><i class="bi bi-envelope"></i> Messages</a>
             </li>
             <li>
-                <form action="../logic/logout.php" method="get">
+                <form action="../../includes/logic/logout.php" method="get">
                     <button type="submit" name="logout" class="btn btn-danger mx-2">Log Out <i class="bi bi-box-arrow-right"></i></button>
                 </form>
             </li>

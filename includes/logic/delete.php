@@ -3,8 +3,8 @@
     session_start();
     include_once('./config.php');
 
-    if(isset($_GET['id'])) {
-        $sql = "DELETE FROM students WHERE id = '". $_GET['id']."'";
+    if(isset($_POST['delete'])) {
+        $sql = "DELETE FROM students WHERE name = '". $_POST['name']."'";
 
         if($conn->query($sql)) {
             $_SESSION['success'] = 'Student deleted success';
@@ -15,4 +15,4 @@
         $_SESSION['error'] = 'Select a student to delete';
     }
 
-    header('location: index.php');
+    header('location: ../../admin/AR/student.php');

@@ -17,7 +17,7 @@ include('../../includes/layouts/admin-header.php')
     <!-- content  -->
     <div class="content">
         <div class="content-button-space">
-            <button class='btn btn-primary' type='submit' name='print'><i class='bi bi-printer-fill'></i> &nbsp; Print</button>
+            <button class='btn btn-danger' type='submit' name='print'><i class='bi bi-file-earmark-image'></i> PDF</button>
             <input class="form-control w-25" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
         </div>
 
@@ -50,9 +50,9 @@ include('../../includes/layouts/admin-header.php')
                         <td>" . $row['paid'] . "</td>
                         <td>" . $row['balance'] . "</td>
                         <td>
-                            <button class='btn btn-secondary' type='submit' name='view'><i class='bi bi-eye'></i> View</button>
-                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-pencil-square'></i> Edit</button>
-                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                            <button class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-eye'></i> View</button>
+                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myEdit' type='submit' name='edit'><i class='bi bi-pencil-square'></i> Edit</button>
+                            <button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#myDelete' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
                         </td>
                         </tr>
                         ";

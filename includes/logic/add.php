@@ -7,6 +7,7 @@ if(isset($_POST['add'])) {
     $fullName = $_POST['fname'];
     $course = $_POST['course'];
     $regno = $_POST['regno'];
+    // i want to assign fees basing on the course unit selected nga it not filled manually 
     $fees = $_POST['fees'];
 
     $sql = "INSERT INTO students (name,course,regno,fees) VALUE('$fullName','$course','$regno','$fees')";

@@ -17,12 +17,12 @@ include('../../includes/layouts/admin-header.php')
     <!-- content  -->
     <div class="content">
         <div class="content-button-space">
-            <button class='btn btn-primary' type='submit' name='print'><i class='bi bi-printer-fill'></i> &nbsp; Print</button>
+            <button class='btn btn-danger' type='submit' name='print'><i class='bi bi-file-earmark-image'></i> PDF</button>
             <input class="form-control w-25" type="search" name="search_student_name" placeholder="Search Student" aria-label="Search">
         </div>
 
         <table class="table table-striped table-bordered table-hover caption-top">
-            <caption class="text-center fs-4">Payments</caption>
+            <caption class="text-center fs-4">PAYMENT</caption>
             <thead class="bg-info text-center">
                 <th>Transaction Id.</th>
                 <th>Name</th>
@@ -50,9 +50,8 @@ include('../../includes/layouts/admin-header.php')
                         <td>" . $row['paid'] . "</td>
                         <td>" . $row['balance'] . "</td>
                         <td>
-                            <button class='btn btn-secondary' type='submit' name='view'><i class='bi bi-eye'></i> View</button>
-                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-pencil-square'></i> Edit</button>
-                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#myPrint' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
                         </td>
                         </tr>
                         ";
@@ -71,6 +70,8 @@ include('../../includes/layouts/admin-header.php')
 
     </div>
 </main>
+
+<?php include_once('../../includes/logic/view_modal.php'); ?>
 
 <?php
     include('../../includes/layouts/footer.php')

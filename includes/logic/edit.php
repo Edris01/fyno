@@ -5,15 +5,12 @@
 
     if(isset($_POST['edit'])) {
         $id = $_POST['id'];
-        $firstname = $_POST['firstname'];
-        $lastname = $_POST['lastname'];
+        $fullName = $_POST['name'];
         $course = $_POST['course'];
         $regno = $_POST['regno'];
         $fees = $_POST['fees'];
-        $hall = $_POST['hall'];
-        $gender = $_POST['gender'];
 
-        $sql = "UPDATE student SET firstname =  '$firstname', lastname = '$lastname', course = '$course', regno = '$regno', fees = '$fees', hall = '$hall', gender = '$gender'";
+        $sql = "UPDATE student SET name =  '$fullName', course = '$course', regno = '$regno', fees = '$fees', hall = '$hall', gender = '$gender'";
         
         if($conn->query($sql)) {
             $_SESSION['success'] = 'Student updated successfully';

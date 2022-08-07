@@ -17,23 +17,24 @@ include('../../includes/layouts/admin-header.php')
     <!-- content  -->
     <div class="content">
 
+        <?php include_once('../../includes/logic/reaction_alert.php'); ?>
+
         <div class="content-button-space">
             <button type="button" data-bs-toggle="modal" class="btn btn-primary" data-bs-target="#myAdd"><span class="bi bi-plus"></span> New</button>
-            <input class="form-control w-25" type="search" name="" placeholder="Search Student" aria-label="Search">
+            <input class="form-control w-25" type="search" autocomplete="off" placeholder="Search Student...">
         </div>
 
-
-        <table class="table table-striped table-bordered table-hover caption-top">
-            <caption class="text-center fs-4">Students</caption>
+        <table id='myTable' class="table table-striped table-bordered table-hover caption-top">
+            <caption class="text-center fs-4">STUDENTS</caption>
             <thead class="bg-info text-center">
-                <th>No.</th>
+                <th>#</th>
                 <th>Full name</th>
                 <th>Course</th>
                 <th>Reg No.</th>
                 <th>Fees</th>
                 <th colspan="3">Action</th>
             </thead>
-            <tbody class="text-center">
+            <tbody class="text-center result">
                 <?php
                 include('../../includes/logic/config.php');
 
@@ -52,9 +53,9 @@ include('../../includes/layouts/admin-header.php')
                         <td>" . $row['regno'] . "</td>
                         <td>" . $row['fees'] . "</td>
                         <td>
-                            <button class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-eye'></i> View</button>
-                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myEdit' type='submit' name='edit'><i class='bi bi-pencil-square'></i> Edit</button>
-                            <button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#myDelete' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                            <button class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#myViewStudent' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myEditStudent' type='submit' name='edit'><i class='bi bi-pencil-square'></i> Edit</button>
+                            <button id='' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#myDelete_student' type='submit' name='delete_student'><i class='bi bi-trash'></i> Delete</button>
                         </td>
                         </tr>
                         ";
@@ -74,12 +75,9 @@ include('../../includes/layouts/admin-header.php')
     </div>
 </main>
 
-<!-- i have hopes of making this one a function to avoid repeating code  -->
-<?php include_once('../../includes/logic/add_modal.php'); ?>
-<?php include_once('../../includes/logic/edit_modal.php'); ?>
-<?php include_once('../../includes/logic/view_modal.php'); ?>
-<?php include_once('../../includes/logic/delete_modal.php'); ?>
-<?php include_once('../../includes/logic/chat_modal.php'); ?>
+<!-- modal in the system  -->
+<?php include_once('../../includes/logic/view_print_modal.php'); ?>
+<?php include_once('../../includes/logic/add_delete_edit_chat_modal.php'); ?>
 
 <?php
 include('../../includes/layouts/footer.php')

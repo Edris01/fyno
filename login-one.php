@@ -1,6 +1,6 @@
 <?php
-  include_once('./includes/logic/config.php');
-  include_once('./includes/logic/server.php');
+  require_once('./includes/logic/config.php');
+  require_once('./includes/logic/server.php');
 ?>
 
 <!DOCTYPE html>
@@ -26,20 +26,21 @@
   </head>
 
   <body>
-    <div class="wrapper login-3">
+    <div class="wrapper">
       <div class="containers">
         <div class="col-left">
           <div class="login-text">
-            <h2><img src="./assets/image/user.jpeg" alt="Logo" /></h2>
-            <h3 class="">Metropolitan</h3>
-            <h2 class="">International</h2>
-            <h3 class="">University</h3>
-            <a class="btn" href="#">Read More</a>
+            <h5><img src="./assets/image/user.jpeg" alt="Logo" /></h5>
+            <h2 class="">Metropolitan</h2>
+            <h3 class="">International</h3>
+            <h4 class="mb-3">University</h4>
+            <a target="_blank" class="btn" href="https://miu.ac.ug/">Read More</a>
+            <br>
           </div>
         </div>
         <div class="col-right">
           <div class="login-form">
-            <h2>Login</h2>
+            <h5>Login</h5>
             <form method="post" action="login-one.php">
               <p>
                 <span class="error"><?php echo $misMatchErr; ?></span>

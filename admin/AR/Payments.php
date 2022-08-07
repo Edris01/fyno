@@ -16,15 +16,17 @@ include('../../includes/layouts/admin-header.php')
 
     <!-- content  -->
     <div class="content">
+        <?php include_once('../../includes/logic/reaction_alert.php'); ?>
+
         <div class="content-button-space">
             <button class='btn btn-danger' type='submit' name='print'><i class='bi bi-file-earmark-image'></i> PDF</button>
-            <input class="form-control w-25" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
+            <input class="form-control w-25" type="search" name="" placeholder="Search Payment" aria-label="Search">
         </div>
 
         <table class="table table-striped table-bordered table-hover caption-top">
-            <caption class="text-center fs-4">Payments</caption>
+            <caption class="text-center fs-4">PAYMENTS</caption>
             <thead class="bg-info text-center">
-                <th>Transaction Id.</th>
+                <th>#</th>
                 <th>Name</th>
                 <th>Registration No.</th>
                 <th>Paid</th>
@@ -50,9 +52,9 @@ include('../../includes/layouts/admin-header.php')
                         <td>" . $row['paid'] . "</td>
                         <td>" . $row['balance'] . "</td>
                         <td>
-                            <button class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-eye'></i> View</button>
-                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myEdit' type='submit' name='edit'><i class='bi bi-pencil-square'></i> Edit</button>
-                            <button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#myDelete' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                            <button class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#myViewPayment' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myEditPayment' type='submit' name='edit'><i class='bi bi-pencil-square'></i> Edit</button>
+                            <button class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#myDeletePayment' type='submit' name='delete_payment'><i class='bi bi-trash'></i> Delete</button>
                         </td>
                         </tr>
                         ";
@@ -71,11 +73,10 @@ include('../../includes/layouts/admin-header.php')
 
     </div>
 </main>
-<?php include_once('../../includes/logic/add_modal.php'); ?>
-<?php include_once('../../includes/logic/edit_modal.php'); ?>
-<?php include_once('../../includes/logic/view_modal.php'); ?>
-<?php include_once('../../includes/logic/delete_modal.php'); ?>
-<?php include_once('../../includes/logic/chat_modal.php'); ?>
+
+<!-- modal in the system  -->
+<?php include_once('../../includes/logic/view_print_modal.php'); ?>
+<?php include_once('../../includes/logic/add_delete_edit_chat_modal.php'); ?>
 
 <?php
     include('../../includes/layouts/footer.php')

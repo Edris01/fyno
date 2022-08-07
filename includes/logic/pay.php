@@ -13,7 +13,7 @@
         $sql = "INSERT INTO payments (name,regno,paid,reason,balance) VALUE('$fullName', '$regNo', '$paid', '$reason', '$balance')";
 
         if($conn->query($sql)) {
-            $_SESSION['success'] = 'Thanks your payments is received';
+            $_SESSION['success'] = 'Payment sent successfully';
         } else{
             $_SESSION['error'] = 'something went wrong';
         }

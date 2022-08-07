@@ -24,10 +24,7 @@ include('../../includes/layouts/admin-header.php')
         <table class="table table-striped table-bordered table-hover caption-top">
             <caption class="text-center fs-4">STATEMENTS</caption>
             <thead class="bg-info text-center">
-                <th>Transaction Id.</th>
                 <th>Name</th>
-                <th>Registration No.</th>
-                <th>Paid</th>
                 <th>Balance</th>
                 <th colspan="2">Action</th>
             </thead>
@@ -44,14 +41,11 @@ include('../../includes/layouts/admin-header.php')
                         echo
                         "
                         <tr>
-                        <td>" . $row['transaction id'] . "</td>
                         <td>" . $row['name'] . "</td>
-                        <td>" . $row['regno'] . "</td>
-                        <td>" . $row['paid'] . "</td>
                         <td>" . $row['balance'] . "</td>
                         <td>
-                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
-                            <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#myPrint' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
+                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#myPrint' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
                         </td>
                         </tr>
                         ";

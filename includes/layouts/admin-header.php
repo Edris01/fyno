@@ -6,7 +6,7 @@
         <ul>
             <li>
                 <form action="../../includes/logic/logout.php" method="get">
-                    <button type="submit" name="logout" class="btn btn-danger mx-2">Log Out <i class="bi bi-box-arrow-right"></i></button>
+                    <button type="submit" name="logout" class="btn btn-danger mx-2">Log Out <i class="bi bi-power"></i></button>
                 </form>
             </li>
         </ul>

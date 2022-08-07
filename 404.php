@@ -1,11 +1,20 @@
-<?php
-    include("./includes/layouts/head.php");
-?>
+<style>
+    .container{
+        margin: 10px auto;
+        max-width: 600px;
+        text-align: center;
+    }
+    h1{
+        margin: 30px 0;
+        font-size: 4em;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+</style>
 
-<h2 class="text-center mt-5"> You can`t access this page ): </h2>
-<p class="text-center fs-3 text-danger">An error occurred !!</p>
-<h1 class="text-center">404</h1>
+<div class="container">
+    <h1>404</h1>
 
-<?php
-    include_once("./includes/layouts/footer.php")
-?>
+    <h3><strong>Page not found :( </strong></h3>
+    <p>The requested page could not be found</p>
+</div>

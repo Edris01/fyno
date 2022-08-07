@@ -3,6 +3,15 @@
     include_once('./config.php');
 
     if(isset($_POST['send'])) {
+
+        // planning to just email the announcement to the students email address just by one click
+
+        // $to = $_POST['receipt'];
+        // $subject = $_POST['chatsubject'];
+        // $message = $_POST['message'];
+        // $from = 'miuofps@miu.ac.ug';
+
+        // mail($to,$subject,$message);
         
         $subject = $_POST['subject'];
         $receipt = $_POST['receipt'];

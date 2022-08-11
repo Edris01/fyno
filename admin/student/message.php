@@ -14,17 +14,17 @@ include('../../includes/layouts/Student-header.php')
         ?>
     </div>
 <!-- payments grouped per semester for easy issuing out a examination permit/card and financial statements  -->
+
     <!-- content  -->
     <div class="content">
         <div class="content-button-space">
             <button type="submit" data-bs-toggle="modal" data-bs-target="#payNow" class="btn btn-warning pull-right"><i class="bi bi-paypal"></i> &nbsp; Pay Now</button>
-            <input class="form-control w-25" type="search" name="search_student_name" placeholder="Search Message" aria-label="Search">
+            <!-- <input class="form-control w-25" type="search" name="search_student_name" placeholder="Search Message" aria-label="Search"> -->
         </div>
 
         <table class="table table-striped table-bordered table-hover caption-top">
             <caption class="text-center fs-4">ANNOUNCEMENTS</caption>
             <thead class="bg-info text-center">
-                <th>#</th>
                 <th>Subject</th>
                 <th>Receipt</th>
                 <th colspan=''>Message</th>
@@ -43,13 +43,12 @@ include('../../includes/layouts/Student-header.php')
                         echo
                         "
                         <tr>
-                        <td>" . $row['id'] . "</td>
                         <td>" . $row['chatsubject'] . "</td>
                         <td>" . $row['receipt'] . "</td>
                         <td>" . $row['content'] . "</td>
                         <td>
-                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
-                            <button class='btn btn-primary' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
+                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myViewMessage' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-primary btn-sm' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
                         </td>
                         </tr>
                         ";
@@ -68,7 +67,7 @@ include('../../includes/layouts/Student-header.php')
 
     </div>
 </main>
-<?php include_once('../../includes/logic/view_modal.php'); ?>
+<?php include_once('../../includes/logic/view_print_modal.php'); ?>
 <?php include_once('../../includes/logic/paynow_modal.php') ?>
 
 

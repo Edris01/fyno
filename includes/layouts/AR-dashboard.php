@@ -4,12 +4,12 @@
         <a class="" href="../../admin/AR/Enroll.php"><i class="bi bi-dice-1 text-success"></i> &nbsp; Enroll</a>
     </li> -->
     <li>
-        <a class="" href="../../admin/AR/Student.php"><i class="bi bi-people text-success"></i> &nbsp; Students</a>
+        <a class="" href="../../admin/AR/Student.php"><i class="bi bi-people"></i> &nbsp; Students</a>
     </li>
     <li>
-        <a class="" href="../../admin/AR/Payments.php"><i class="bi bi-credit-card text-success"></i> &nbsp; Payments</a>
+        <a class="" href="../../admin/AR/Payments.php"><i class="bi bi-credit-card"></i> &nbsp; Payments</a>
     </li>
     <li>
-        <a class="" data-bs-toggle="modal" data-bs-target="#chat"><i class="bi bi-chat-dots text-success"></i> &nbsp; Chat</a>
+        <a class="" data-bs-toggle="modal" data-bs-target="#chat"><i class="bi bi-chat-dots"></i> &nbsp; Chat</a>
     </li>
 </ul>

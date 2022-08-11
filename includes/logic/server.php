@@ -42,7 +42,7 @@ if (isset($_POST['login'])) {
             $_SESSION['regno'] = $regno;
             header('Location: ./admin/Student/Payments.php');
         } else {
-            $misMatchErr = "Username & Password don`t match";
+            $misMatchErr = "Invalid Username or Password";
         }
     }
 }

@@ -33,25 +33,21 @@ body {
 .containers {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
   height: auto;
   display: flex;
   background: #ffffff;
   box-shadow: 0 0 5px #999999;
 }
 
-.container.login-3 {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.login-3 .col-left,
-.login-3 .col-right {
+.col-left,
+.col-right {
   width: 55%;
   padding: 45px 35px;
   display: flex;
 }
 
-.login-3 .col-left {
+.col-left {
   width: 45%;
   background: #4caf50;
   -webkit-clip-path: polygon(
@@ -79,13 +75,14 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  .login-3 .container {
-    flex-direction: column;
-    box-shadow: none;
+  .containers{
+    max-width: 400px;
   }
-
-  .login-3 .col-left,
-  .login-3 .col-right {
+  .col-left{
+    display: none;
+  }
+  .col-left,
+  .col-right {
     width: 100%;
     margin: 0;
     padding: 30px;
@@ -94,31 +91,31 @@ body {
   }
 }
 
-.login-3 .login-text {
+.login-text {
   position: relative;
   width: 100%;
   color: #ffffff;
   text-align: center;
 }
 
-.login-3 h2 {
+h5 {
   margin: 0 0 15px 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-.login-3 h2 img {
+h5 img {
   width: 100px;
 }
 
-.login-3 p {
+p {
   margin: 0 0 20px 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
 }
 
-.login-3 .btn {
+.btn {
   display: inline-block;
   padding: 7px 20px;
   font-size: 16px;
@@ -132,49 +129,49 @@ body {
   -webkit-transition: 0.3s;
 }
 
-.login-3 .btn:hover {
+.btn:hover {
   color: #4caf50;
   background: #ffffff;
 }
 
-.login-3 .login-form {
+.login-form {
   position: relative;
   width: 100%;
   color: #666666;
 }
 
-.login-3 .login-form p:last-child {
+.login-form p:last-child {
   margin: 0;
 }
 
-.login-3 .login-form p a {
+.login-form p a {
   color: #4caf50;
   font-size: 14px;
   text-decoration: none;
 }
 
-.login-3 .login-form p:last-child a:last-child {
+.login-form p:last-child a:last-child {
   float: right;
 }
 
-.login-3 .login-form label {
+.login-form label {
   display: block;
   width: 100%;
   margin-bottom: 2px;
   letter-spacing: 0.5px;
 }
 
-.login-3 .login-form p:last-child label {
+.login-form p:last-child label {
   width: 60%;
   float: left;
 }
 
-.login-3 .login-form label span {
+.login-form label span {
   color: #ff574e;
   padding-left: 2px;
 }
 
-.login-3 .login-form input {
+.login-form input {
   display: block;
   width: 100%;
   height: 40px;
@@ -186,11 +183,11 @@ body {
   border-radius: 5px;
 }
 
-.login-3 .login-form input:focus {
+.login-form input:focus {
   border-color: #ff574e;
 }
 
-.login-3 .login-form input.btn {
+.login-form input.btn {
   color: #ffffff;
   background: #4caf50;
   border-color: #4caf50;
@@ -198,7 +195,7 @@ body {
   cursor: pointer;
 }
 
-.login-3 .login-form input.btn:hover {
+.login-form input.btn:hover {
   color: #4caf50;
   background: #ffffff;
 }

@@ -3,7 +3,13 @@ session_start();
 include_once('config.php');
 
 if (isset($_POST['search'])) {
+    $pattern = '/[a-zA-Z]^/';
     $searchedName = $_POST['search'];
+
+    $sql = "SELECT student.name FROM payment WHERE username = '$searchedName'";
+
+
+    preg_match_all($pattern, $searchedName, $sql);
 
     $sql = "SELECT student.name FROM payment WHERE username = '$searchedName'";
     $results = mysqli_query($conn, $sql);

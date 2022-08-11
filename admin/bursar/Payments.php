@@ -50,8 +50,8 @@ include('../../includes/layouts/admin-header.php')
                         <td>" . $row['paid'] . "</td>
                         <td>" . $row['balance'] . "</td>
                         <td>
-                            <button class='btn btn-success' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
-                            <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#myPrint' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
+                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myView' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#myPrint' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
                         </td>
                         </tr>
                         ";

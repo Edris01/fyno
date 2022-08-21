@@ -16,28 +16,29 @@ include('../../includes/layouts/admin-header.php')
 
     <!-- content  -->
     <div class="content">
-        <div class="d-flex">
-            <h3 class="text-success col-md-8">Students</h3>
-            <div class="d-flex col-md-4">
-                <input class="form-control me-2" type="search" name="search_student_name" placeholder="Student" aria-label="Search">
-                <button class="btn btn-outline-success" name="search_student_AR" type="submit">Search</button>
-            </div>
-        </div>
-        <hr class="text-success">
 
-        <table class="table table-striped table-hover w-100">
-            <thead class="bg-warning">
-                <th>No.</th>
-                <th>Username</th>
-                <th>Email</th>
+        <?php include_once('../../includes/logic/reaction_alert.php'); ?>
+
+        <div class="content-button-space">
+            <button type="button" data-bs-toggle="modal" class="btn btn-primary" data-bs-target="#myAdd"><span class="bi bi-plus"></span> New</button>
+            <input class="form-control w-25" type="search" autocomplete="off" placeholder="Search Student...">
+        </div>
+
+        <table id='myTable' class="table table-striped table-bordered table-hover caption-top">
+            <caption class="text-center fs-4">STUDENTS</caption>
+            <thead class="bg-info text-center">
+                <th>#</th>
+                <th>Full name</th>
+                <th>Course</th>
                 <th>Reg No.</th>
-                <th colspan="2">Action</th>
+                <th>Fees</th>
+                <th colspan="3">Action</th>
             </thead>
-            <tbody>
+            <tbody class="text-center result">
                 <?php
                 include('../../includes/logic/config.php');
 
-                $sql = "SELECT * FROM users";
+                $sql = "SELECT * FROM students";
                 $result = mysqli_query($conn, $sql);
                 $rowCount = mysqli_num_rows($result);
 
@@ -47,18 +48,25 @@ include('../../includes/layouts/admin-header.php')
                         "
                         <tr>
                         <td>" . $row['id'] . "</td>
-                        <td>" . $row['username'] . "</td>
-                        <td>" . $row['email'] . "</td>
+                        <td>" . $row['name'] . "</td>
+                        <td>" . $row['course'] . "</td>
                         <td>" . $row['regno'] . "</td>
+                        <td>" . $row['fees'] . "</td>
                         <td>
-                            <button class='btn btn-success' type='submit' name='delete'><i class='bi bi-eye'></i> Edit</button>
-                            <button class='btn btn-danger' type='submit' name='delete'><i class='bi bi-trash'></i> Delete</button>
+                            <button class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#myViewStudent' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
+                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myEditStudent' type='submit' name='edit'><i class='bi bi-pencil-square'></i> Edit</button>
+                            <button id='' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#myDelete_student' type='submit' name='delete_student'><i class='bi bi-trash'></i> Delete</button>
                         </td>
                         </tr>
                         ";
                     }
                 } else {
-                    echo 'No result found.';
+                    echo(
+                        "
+                        <tr>
+                        <td colspan='7'>No Results Found!!!</td>
+                        </tr>
+                        ");
                 }
                 ?>
             </tbody>
@@ -67,6 +75,22 @@ include('../../includes/layouts/admin-header.php')
     </div>
 </main>
 
+<!-- modal in the system  -->
+<?php include_once('../../includes/logic/view_print_modal.php'); ?>
+<?php include_once('../../includes/logic/add_delete_edit_chat_modal.php'); ?>
+
+<!-- jquery linkup  -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("myTable").DataTable();
+
+        $(document).on("click", '.close', function() {
+            $('.alert').hide();
+        })
+    }) 
+</script>
 <?php
-    include('../../includes/layouts/footer.php')
+include('../../includes/layouts/footer.php')
 ?>

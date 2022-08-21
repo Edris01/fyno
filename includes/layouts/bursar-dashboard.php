@@ -15,6 +15,6 @@
         <a class="" href="../../admin/bursar/statements.php"><i class="bi bi-credit-card"></i> &nbsp; Statements</a>
     </li>
     <li>
-        <a class="" href="../../admin/bursar/advanced.php"><i class="bi bi-calculator-fill"></i> &nbsp; Statements</a>
+        <a class="" href="../../admin/bursar/advanced.php"><i class="bi bi-calculator-fill"></i> &nbsp; Calculator</a>
     </li>
 </ul>

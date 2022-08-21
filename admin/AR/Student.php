@@ -79,6 +79,18 @@ include('../../includes/layouts/admin-header.php')
 <?php include_once('../../includes/logic/view_print_modal.php'); ?>
 <?php include_once('../../includes/logic/add_delete_edit_chat_modal.php'); ?>
 
+<!-- jquery linkup  -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("myTable").DataTable();
+
+        $(document).on("click", '.close', function() {
+            $('.alert').hide();
+        })
+    }) 
+</script>
 <?php
 include('../../includes/layouts/footer.php')
 ?>

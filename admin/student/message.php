@@ -8,11 +8,11 @@ include('../../includes/layouts/Student-header.php')
 
 <main>
     <!-- sidebar  -->
-    <div class="left-sidebar">
+    <!-- <div class="left-sidebar">
         <?php
-        include('../../includes/layouts/Student-dashboard.php')
+        // include('../../includes/layouts/Student-dashboard.php')
         ?>
-    </div>
+    </div> -->
 <!-- payments grouped per semester for easy issuing out a examination permit/card and financial statements  -->
 
     <!-- content  -->
@@ -25,10 +25,9 @@ include('../../includes/layouts/Student-header.php')
         <table class="table table-striped table-bordered table-hover caption-top">
             <caption class="text-center fs-4">ANNOUNCEMENTS</caption>
             <thead class="bg-info text-center">
+                <th>Date</th>
                 <th>Subject</th>
-                <th>Receipt</th>
-                <th colspan=''>Message</th>
-                <th>Action</th>
+                <th colspan='5'>Message</th>
             </thead>
             <tbody class="text-center">
                 <?php
@@ -43,13 +42,9 @@ include('../../includes/layouts/Student-header.php')
                         echo
                         "
                         <tr>
+                        <td>". Date('d-M-Y') ."</td>
                         <td>" . $row['chatsubject'] . "</td>
-                        <td>" . $row['receipt'] . "</td>
                         <td>" . $row['content'] . "</td>
-                        <td>
-                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myViewMessage' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
-                            <button class='btn btn-primary btn-sm' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
-                        </td>
                         </tr>
                         ";
                     }

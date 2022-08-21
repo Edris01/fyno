@@ -8,11 +8,11 @@ include('../../includes/layouts/Student-header.php')
 
 <main>
     <!-- sidebar  -->
-    <div class="left-sidebar">
+    <!-- <div class="left-sidebar">
         <?php
-        include('../../includes/layouts/Student-dashboard.php')
+        // include('../../includes/layouts/Student-dashboard.php')
         ?>
-    </div>
+    </div> -->
 
     <!-- content  -->
 
@@ -33,7 +33,7 @@ include('../../includes/layouts/Student-header.php')
                 <th>Registration No.</th>
                 <th>Paid</th>
                 <th>Balance</th>
-                <th colspan="2">Action</th>
+                <!-- <th colspan="2">Action</th> -->
             </thead>
             <tbody class="text-center">
                 <?php
@@ -52,10 +52,6 @@ include('../../includes/layouts/Student-header.php')
                         <td>" . $row['regno'] . "</td>
                         <td>" . $row['paid'] . "</td>
                         <td>" . $row['balance'] . "</td>
-                        <td>
-                            <button class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#myViewPayment' type='submit' name='view'><i class='bi bi-binoculars'></i> View</button>
-                            <button class='btn btn-primary btn-sm' type='submit' name='print'><i class='bi bi-printer-fill'></i> Print</button>
-                        </td>
                         </tr>
                         ";
                     }
@@ -63,7 +59,7 @@ include('../../includes/layouts/Student-header.php')
                     echo
                         ("
                         <tr>
-                        <td colspan='6'> No Results Found!!!</td>
+                        <td colspan='5'> No Results Found!!!</td>
                         </tr>
                         ");
                 }

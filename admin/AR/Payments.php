@@ -20,7 +20,7 @@ include('../../includes/layouts/admin-header.php')
 
         <div class="content-button-space">
             <button class='btn btn-danger' type='submit' name='print'><i class='bi bi-file-earmark-image'></i> PDF</button>
-            <input class="form-control w-25" type="search" name="" placeholder="Search Payment" aria-label="Search">
+            <input class="form-control w-25" type="search" name="" placeholder="Search Payment..." aria-label="Search">
         </div>
 
         <table class="table table-striped table-bordered table-hover caption-top">
